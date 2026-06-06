@@ -1,0 +1,1 @@
+### Applying different prre-created methods (functiond/methods)
