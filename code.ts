@@ -59,7 +59,15 @@ class BusinessContact extends Contact {
 }
 
 class AddressBook {
-    constructor(
-        private _contacts: Contact[]
-    )
+        private _contacts: Contact[] = [];
+
+        public addContact (contact: Contact): void {
+            if (this. _contacts.some(number => number.phone === contact) === true) // I plan to check if the contact is already existing, since numbers are unique, i'd check ith it.
+            this._contacts.push(contact)
+        }
+
+        public findContact(name: string): Contact | undefined {
+
+        }
+
 }
