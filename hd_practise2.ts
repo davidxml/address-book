@@ -70,5 +70,12 @@ const Pet: Dog = {   // Because of the extension property pet now requires both 
     breed: "PitBull"
 }
 
+/*  this example would have used an interface instead of a type. a type is used when we want to use union 
+    type AllowedBreeds = "PitBull" | "Labrador" | "Poodle";
+
+    so we restrict the breed property to only accept those three values. 
+    if we try to assign a value that is not in the union type it will throw an error.
+*/
+
 
 
