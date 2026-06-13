@@ -1,14 +1,12 @@
 class Contact {
-    private _firstName?: string | null;
-    private _lastName?: string | null;
+    private _firstName: string;
+    private _lastName: string;
     private _phone: string;
-    private _name: string;
 
-    constructor(phone: string, firstName?: string, lastName?: string) {
-        this._firstName = lastName;
-        this._lastName = firstName;
+    constructor( firstName: string, lastName: string, phone: string,) {
+        this._firstName = firstName;
+        this._lastName = lastName;
         this._phone = phone;
-        this._name = `${this._firstName} ${this._lastName}`
     }
 
     public get name(): string {
@@ -33,23 +31,23 @@ class Contact {
 }
 
 class PersonalContact extends Contact {
- //   private _relationship: string;
-//
- //   constructor (name: string, phone: string, relationship: string) {
- //       super(firstName, lastName, phone);
- //       this._relationship = relationship;
- //   }
-//
- //   public override display_info(): void {
- //       console.log(`Name: ${this.name} | Phone: ${this.phone} | Relationship: ${this._relationship}`)
- //   }
-}//
+    private _relationship: string;
+
+    constructor (firstName: string, lastName: string, phone: string, relationship: string) {
+        super(firstName, lastName, phone);
+        this._relationship = relationship;
+    }
+
+    public override display_info(): void {
+        console.log(`Name: ${this.name} | Phone: ${this.phone} | Relationship: ${this._relationship}`)
+    }
+}
 
 class BusinessContact extends Contact {
     private _emailAddress: string; _company: string; _jobTitle: string;
 
-    constructor (name: string,  phone: string, emailAddress: string, company: string, jobTitle: string) {
-        super(name, phone);
+    constructor (firstName: string, lastName: string, phone: string, emailAddress: string, company: string, jobTitle: string) {
+        super(firstName, lastName, phone);
         this._emailAddress = emailAddress;
         this._company = company;
         this._jobTitle = jobTitle
@@ -60,3 +58,8 @@ class BusinessContact extends Contact {
     }
 }
 
+class AddressBook {
+    constructor(
+        private _contacts: Contact[]
+    )
+}
