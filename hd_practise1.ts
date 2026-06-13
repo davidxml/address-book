@@ -9,6 +9,8 @@
 - spend and save 
 */ 
 
+// Abstract classes, interfaces, types should be used as well as the pillars of OOP
+
 class Bank {
     private balance: number = 100
 
