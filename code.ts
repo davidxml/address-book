@@ -40,7 +40,7 @@ class PersonalContact extends Contact {
 
     public override display_info(): void {
         console.log(`Name: ${this.name} | Phone: ${this.phone} | Relationship: ${this._relationship}`)
-    }
+    } // Comment from termux - mobile device environment.
 }
 
 class BusinessContact extends Contact {
